@@ -296,4 +296,7 @@
     <!-- Google DNS hostname -->
     <string name="private_dns_hostname_google" translatable="false">dns.google</string>
 
+    <!-- Running services - Background processes tab -->
+    <string name="background_processes_settings_title">Background processes</string>
+
 </resources>
