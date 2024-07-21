@@ -49,8 +49,8 @@ import java.util.concurrent.TimeUnit;
 @RunWith(AndroidJUnit4.class)
 public class BackAnimationPreferenceControllerTest {
 
-    private static final int SETTING_VALUE_OFF = 0;
-    private static final int SETTING_VALUE_ON = 1;
+    private static final int SETTING_VALUE_OFF = 1;
+    private static final int SETTING_VALUE_ON = 0;
 
     private SwitchPreference mPreference;
 

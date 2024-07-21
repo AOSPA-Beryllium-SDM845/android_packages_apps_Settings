@@ -37,8 +37,8 @@ public class BackAnimationPreferenceController extends DeveloperOptionsPreferenc
     private static final String BACK_NAVIGATION_ANIMATION_KEY =
             "back_navigation_animation";
 
-    private static final int SETTING_VALUE_OFF = 0;
-    private static final int SETTING_VALUE_ON = 1;
+    private static final int SETTING_VALUE_OFF = 1;
+    private static final int SETTING_VALUE_ON = 0;
     private final DevelopmentSettingsDashboardFragment mFragment;
 
     @VisibleForTesting
@@ -75,7 +75,7 @@ public class BackAnimationPreferenceController extends DeveloperOptionsPreferenc
     @Override
     public void updateState(Preference preference) {
         final int mode = Settings.Global.getInt(mContext.getContentResolver(),
-                Settings.Global.ENABLE_BACK_ANIMATION, SETTING_VALUE_OFF);
+                Settings.Global.ENABLE_BACK_ANIMATION, SETTING_VALUE_ON);
         ((SwitchPreference) mPreference).setChecked(mode != SETTING_VALUE_OFF);
     }
 
@@ -83,7 +83,7 @@ public class BackAnimationPreferenceController extends DeveloperOptionsPreferenc
     protected void onDeveloperOptionsSwitchDisabled() {
         super.onDeveloperOptionsSwitchDisabled();
         Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.ENABLE_BACK_ANIMATION, SETTING_VALUE_OFF);
-        ((SwitchPreference) mPreference).setChecked(false);
+                Settings.Global.ENABLE_BACK_ANIMATION, SETTING_VALUE_ON);
+        ((SwitchPreference) mPreference).setChecked(true);
     }
 }
