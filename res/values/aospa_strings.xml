@@ -291,4 +291,9 @@
     <!-- AdGuard DNS hostname -->
     <string name="private_dns_hostname_adguard" translatable="false">dns.adguard.com</string>
 
+    <!-- Google DNS Option -->
+    <string name="private_dns_mode_google" translatable="false">Google DNS</string>
+    <!-- Google DNS hostname -->
+    <string name="private_dns_hostname_google" translatable="false">dns.google</string>
+
 </resources>
